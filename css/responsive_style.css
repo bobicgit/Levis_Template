@@ -1,8 +1,16 @@
-section{
-  width:100%;
-}
-
+  /*section{
+    width:100%;
+  }
+*/
 /***************TOP NAVBAR ********************/
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 
 #form_style  {
   margin: 15 auto 0 auto;
@@ -10,11 +18,21 @@ section{
 }
 .navbar-right li:last-child{
   margin-top: 9px;
-  font-size:20px;
+  font-size:25px;
+  padding-right: 5px;
 } 
-#bs-example-navbar-collapse-1, .navbar-header{
-  margin-bottom:5px;
+.navbar-right li:first-child{
+  margin-top: -5px;
+  
 } 
+@media (max-width: 1200px){
+  #bs-example-navbar-collapse-1, .navbar-header{
+    margin-bottom:15px;
+  } 
+}
+#bs-example-navbar-collapse-1 ul{
+  margin-bottom: 10px;
+}
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
@@ -23,6 +41,11 @@ section{
 
 .navbar .navbar-collapse {
   text-align: center;
+}
+@media (min-width: 768px){
+.navbar>.container .navbar-brand{
+    margin-left: 10px;
+  }
 }
 
 .navbar-default {
@@ -34,17 +57,24 @@ section{
 .navbar-toggle{
   margin-top:12px;
 }
-#nav_links{
-  
+.navbar {
+    border-radius: 0px;
 }
-
 /********************** GREEN NAVBAR *******************/
 
 #nav_links{
   background-color: #4ccfc1;
 }
+#bs-example-navbar-collapse-2{
+  padding: 0 0;
+}
 #bs-example-navbar-collapse-2 ul {
   margin-top:15px;
+  
+}
+#bs-example-navbar-collapse-2>ul>li>a {
+  letter-spacing: 0.5px;
+  font-size:15px;
 }
 
 @media (min-width: 768px){ 
@@ -55,6 +85,11 @@ section{
   border-right: none; 
   }
 }
+@media (min-width: 992px) {
+   .navbar-collapse, .collapse {
+       display: none !important;
+   }
+}
 
 #bs-example-navbar-collapse-2 li>a{
   color: white;
@@ -64,21 +99,255 @@ section{
   padding: 10px 15px; 
   font-size: 15px;  
 }
-
+@media (max-width: 1200px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
 /**************TOP SLIDER****************/
-#wraper{
-  padding:25px;
+#wraper_for_slider_top{
+  padding:35px;
   background-color:#38c1b1;
+  width: 100%;
+}
+.carousel-indicators li {
+  width: 9px;
+  height: 9px;
+  margin: 4px;
+  background-color: #fff;
+}
+.carousel-indicators .active {
+  border: 1px solid #7ad4cd;
+  background-color: #7ad4cd;
+  width: 9px;
+  height: 9px;
+  margin: 4px;
+}
+.item h1 {
+  color: #fff;
+  font-size: 41px;
+  letter-spacing: -3px;
+}
+.item h6 {
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.5em;
+}
+.btn{
+  margin-top: 30px; 
+  width:134px;
+  height: 40px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color:#fff;
+  font-size:17px;
+}
+.btn:hover{
+  margin-top: 30px; 
+  width:134px;
+  height: 40px;
+  border: 2px solid #fff;
+  background-color: #7ad4cd;
+  color:#fff;
+  font-size:17px;
+}
+.carousel-indicators {
+  position: absolute;
+  left: 27%;
+  z-index: 15;
+  width: 60%;
+  padding-left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  list-style: none;
+}
+@media screen and (min-width: 768px){
+.carousel-indicators {
+    bottom: -25px;
+}
 }
 @media (max-width: 768px){ 
   .carousel-inner{
-    
     text-align:center;
   }
-   ol{
-    margin-bottom: 20px;
+
+  .carousel-indicators {
+    left: 20%;
+    
+    margin-left: auto;
+    margin-right: auto;
   }
-  .item button{
-    margin-top: 15px;
+  ol{
+    margin-bottom: 30px;
   }
+
+  .item h1{
+    margin-bottom: 10px;
+  }
+  .item h6{
+    margin-bottom: 10px;
+  }
+}
+
+/*********************SLIDER BOTTOM*****************/
+
+.carousel-control.left, .carousel-control.right{
+  background-image: none;
+}
+.center{
+  text-align: center;
+}
+
+#slider_bottom div{
+  text-align: center;
+}
+#slider_bottom{
+  padding: 0 20px;
+}
+.item h3{
+  letter-spacing: -1px;
+  font-size: 25px;
+  color:#afafaf;
+}
+.btn_shop{
+  margin-top: 18px; 
+  width:57px;
+  height: 32px;
+  border: 0px solid #fff;
+  background-color: #3cc395;
+  color:#fff;
+  font-size:14px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+.btn_shop:hover{
+  border: 2px solid #3cc395;
+  background-color: #7ad4cd;
+  color:#fff;
+}
+.chevron{
+  position:absolute;
+  top:25%;
+}
+.active>.row>.col-md-4:first-child{
+  border-right: 1px solid #e7e7e7;  
+}
+.active>.row>.col-md-4:nth-child(2){
+  border-right: 1px solid #e7e7e7;  
+}
+.active>.row>.col-md-4{
+  height:191px;
+}
+.active>.row>.col-md-4>.row>.col-sm-6{
+  padding:20px;
+}
+
+#carousel-example-generic2>.container{
+  padding: 0 25px;
+}
+
+.carousel-control{
+  width: 5%;
+}
+@media screen and (max-width: 768px){
+  .chevron{
+    position:absolute;
+    top:50%;
+  }
+  .active>.row>.col-md-4{
+  height:326px;
+}
+}
+
+@media screen and (max-width: 991px){
+  .chevron{
+    position:absolute;
+    top:40%;
+  }
+}
+
+/*********************FEATURE TEXT*****************/
+
+#feature {
+  background-color: #38c1b1;
+  color:#fff;
+  height:75px;
+}
+#feature h2{
+  margin:0 auto;
+  
+  text-align: left;
+  display: block;
+  letter-spacing: -2px;
+  padding: 23px;
+  font-size: 25px;
+}
+
+/********************FOOTER***********/
+
+#footer{
+  /*height: 337px;*/
+  background-color: #3cc3b5;
+  color:#fff;
+  padding: 25px 0;
+}
+
+
+.col-md-3 p{
+  margin-bottom:15px;
+  font-size: 25px;
+  letter-spacing: -2px;
+}
+.col-md-3 a {
+  text-decoration: none;
+  color:#fff;
+  font-size: 15px;
+}
+.col-md-3 ul{
+  list-style: none;
+  padding: 0px;
+  line-height: 2em;
+  font-weight: 20;
+}
+
+@media screen and (max-width: 991px){
+  #footer>.container{
+    text-align: center;
+
+  }
+  .col-md-3{
+    margin-top: 30px;
+  }
+}
+/*********************COPYRIGHT SECTION*****************/
+
+#copyright{
+  font-size: 15px;
+  color:#fff; 
+  padding:12px;
+  height: 46px;
+  background-color: #2da89b;
 }
