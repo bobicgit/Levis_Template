@@ -66,7 +66,29 @@ html,body
     margin-left:-10px;
   }
 }
+@media (max-width: 768px){
+  .navbar-form .form-control {
+    display: inline-block;
+    width: 330px  ;
+    vertical-align: middle;
+    margin-left:-10px;
+  }
+  #bs-example-navbar-collapse-1>.navbar-nav {
+    float: right!important;
+    margin-top: 20px;
+  }
+.navbar-form>button {
+    position: absolute;
+    bottom: 21px;
+    margin-left: 124px;
+  }
+  .navbar-form>#search_button>img {
+    margin-left: 0px;
+  }
+}
+
 /*CHANGING A PROPERTIES FOR TOP NAVBAR WHEN COLLAPSED*/
+
 @media (max-width: 1200px){
   #bs-example-navbar-collapse-1, .navbar-header{
     margin-bottom:15px;
@@ -77,7 +99,6 @@ html,body
   }
   #bs-example-navbar-collapse-1>.navbar-nav{
     float: right!important;
-    margin-top: 7.5px;
   }
   #bs-example-navbar-collapse-1>.navbar-left{
     float:left!important;
@@ -115,7 +136,9 @@ html,body
   border-right: none; 
   }
 }
+
 /*MAKING A COLLAPSE APPEAR ON 1200 px WIDTH OF WINDOW*/
+
 @media (max-width: 1200px) {
   .navbar-header {
     float: none;
@@ -162,7 +185,7 @@ html,body
 /**************TOP SLIDER****************/
 
 #wraper_for_slider_top{
-  padding:35px;
+  padding:45px 35px 35px 35px;
   background-color:#38c1b1;
   width: 100%;
 }
@@ -220,7 +243,11 @@ html,body
 }
 @media screen and (min-width: 768px){
   .carousel-indicators {
-    bottom: -25px;
+    bottom: -40px;
+    margin-left:7.5px;
+  }
+  #wraper_for_slider_top{
+    height: 448px;
   }
 }
 @media (max-width: 768px){ 
